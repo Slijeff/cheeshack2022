@@ -23,9 +23,21 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
         justify={'space-evenly'}
         align={'center'}
       >
-        <NavbarButton text={'Find'} icon={<IconPaw color='white' />} />
-        <NavbarButton text={'Report'} icon={<IconPlus color='white' />} />
-        <NavbarButton text={'Profile'} icon={<IconUser color='white' />} />
+        <NavbarButton
+          text={'Discover'}
+          icon={<IconPaw color='white' />}
+          routeTo={'/home'}
+        />
+        <NavbarButton
+          text={'Report'}
+          icon={<IconPlus color='white' />}
+          routeTo={'/'}
+        />
+        <NavbarButton
+          text={'Profile'}
+          icon={<IconUser color='white' />}
+          routeTo={'/profile'}
+        />
       </Flex>
     </Box>
   );
