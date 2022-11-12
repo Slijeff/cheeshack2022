@@ -8,17 +8,23 @@ interface NavbarProps {}
 
 const Navbar: FunctionComponent<NavbarProps> = () => {
   return (
-    <Box sx={{ padding: 10 }}>
-      <Outlet />
+    <Flex
+      sx={{ padding: 10, width: '100vw', overflow: 'hidden' }}
+      direction={'column'}
+      gap={10}
+    >
+      <Box sx={{ paddingBottom: '5vh' }}>
+        <Outlet />
+      </Box>
       <Flex
         sx={{
           position: 'fixed',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          width: '100%',
+          bottom: 5,
+          width: '100vw',
           backgroundColor: '#15AABF',
-          padding: 'inherit',
+          padding: '10',
+          overflow: 'hidden',
+          borderRadius: '10px',
         }}
         justify={'space-evenly'}
         align={'center'}
@@ -39,7 +45,7 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
           routeTo={'/profile'}
         />
       </Flex>
-    </Box>
+    </Flex>
   );
 };
 

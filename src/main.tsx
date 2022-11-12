@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import Home from './pages/home';
-import Spot from './pages/Spot';
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
 import Profile from './pages/profile';
 import {
@@ -10,6 +9,7 @@ import {
   ColorScheme,
 } from '@mantine/core';
 import Navbar from './components/navbar';
+import './global.css';
 
 function Main() {
   const router = createBrowserRouter([
