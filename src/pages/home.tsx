@@ -1,14 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Text, Button } from '@mantine/core';
+import { Text, Button, Title, Box } from '@mantine/core';
 function Home() {
-  return (
-    <div className='App'>
-      <Text>Home Page</Text>
-      <Link to='/profile'>
-        <Button>To Profile Page</Button>
-      </Link>
-    </div>
-  );
+  return <Title>Placeholder Text</Title>;
 }
 
 export default Home;
