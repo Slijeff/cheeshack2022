@@ -3,6 +3,7 @@ import { FunctionComponent } from 'react';
 import { Outlet } from 'react-router-dom';
 import NavbarButton from './navbarButton';
 import { IconPaw, IconPlus, IconUser } from '@tabler/icons';
+import ReportMenu from './reportMenu';
 
 interface NavbarProps {}
 
@@ -34,11 +35,7 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
           icon={<IconPaw color='white' />}
           routeTo={'/home'}
         />
-        <NavbarButton
-          text={'Report'}
-          icon={<IconPlus color='white' />}
-          routeTo={'/'}
-        />
+        <ReportMenu></ReportMenu>
         <NavbarButton
           text={'Profile'}
           icon={<IconUser color='white' />}
