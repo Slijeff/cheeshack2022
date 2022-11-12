@@ -11,6 +11,7 @@ import {
 import Navbar from './components/navbar';
 import './global.css';
 import Report from './pages/report';
+import Donate from './pages/donate';
 
 function Main() {
   const router = createBrowserRouter([
@@ -29,6 +30,10 @@ function Main() {
         {
           path: '/report',
           element: <Report />,
+        },
+        {
+          path: '/donate',
+          element: <Donate />,
         },
       ],
     },

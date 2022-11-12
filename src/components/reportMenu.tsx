@@ -24,7 +24,7 @@ const ReportMenu: FunctionComponent<ReportMenuProps> = () => {
       <Menu.Dropdown>
         <Menu.Label>Want to Help?</Menu.Label>
         <Menu.Divider></Menu.Divider>
-        <Menu.Item sx={{ fontSize: '1rem' }}>Donate</Menu.Item>
+        <Menu.Item sx={{ fontSize: '1rem' }} onClick={() => navigate('/donate')}>Donate</Menu.Item>
         <Menu.Divider></Menu.Divider>
         <Menu.Item
           sx={{ fontSize: '1rem' }}
