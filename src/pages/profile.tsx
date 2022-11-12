@@ -145,9 +145,6 @@ const Profile: FC<ProfileProps> = () => {
       </Group>
       </Card.Section>
     </Card>
-      <Link to={'/'}>
-        <Button> To Home</Button>
-      </Link>
     </Flex>
   );
 };
