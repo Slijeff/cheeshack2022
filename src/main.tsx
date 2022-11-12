@@ -10,6 +10,7 @@ import {
 } from '@mantine/core';
 import Navbar from './components/navbar';
 import './global.css';
+import Report from './pages/report';
 
 function Main() {
   const router = createBrowserRouter([
@@ -24,6 +25,10 @@ function Main() {
         {
           path: '/profile',
           element: <Profile />,
+        },
+        {
+          path: '/report',
+          element: <Report />,
         },
       ],
     },
