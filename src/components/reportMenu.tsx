@@ -1,10 +1,12 @@
 import { ActionIcon, Button, Flex, Menu, Text } from '@mantine/core';
 import { FunctionComponent } from 'react';
 import { IconCirclePlus } from '@tabler/icons';
+import { useNavigate } from 'react-router-dom';
 
 interface ReportMenuProps {}
 
 const ReportMenu: FunctionComponent<ReportMenuProps> = () => {
+  const navigate = useNavigate();
   return (
     <Menu
       shadow='lg'
@@ -22,11 +24,16 @@ const ReportMenu: FunctionComponent<ReportMenuProps> = () => {
       <Menu.Dropdown>
         <Menu.Label>Want to Help?</Menu.Label>
         <Menu.Divider></Menu.Divider>
-        <Menu.Item>Adopt</Menu.Item>
+        <Menu.Item sx={{ fontSize: '1rem' }}>Donate</Menu.Item>
         <Menu.Divider></Menu.Divider>
-        <Menu.Item>Report</Menu.Item>
+        <Menu.Item
+          sx={{ fontSize: '1rem' }}
+          onClick={() => navigate('/report')}
+        >
+          Report/Post
+        </Menu.Item>
         <Menu.Divider></Menu.Divider>
-        <Menu.Item>Offer</Menu.Item>
+        <Menu.Item sx={{ fontSize: '1rem' }}>Offer</Menu.Item>
       </Menu.Dropdown>
     </Menu>
   );
