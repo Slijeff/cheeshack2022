@@ -8,16 +8,19 @@ import {
   ColorSchemeProvider,
   ColorScheme,
 } from '@mantine/core';
+import Navbar from './components/navbar';
 
 function Main() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Home />,
-    },
-    {
-      path: '/profile',
-      element: <Profile />,
+      element: <Navbar />,
+      children: [
+        {
+          path: '/home',
+          element: <Home />,
+        },
+      ],
     },
   ]);
 
