@@ -21,11 +21,11 @@ function Main() {
           path: '/home',
           element: <Home />,
         },
+        {
+          path: '/profile',
+          element: <Profile />,
+        },
       ],
-    },
-    {
-      path: '/spot',
-      element: <Spot />,
     }
 
   ]);
