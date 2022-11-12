@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Title, Flex, Button, Image, Badge, ActionIcon, Menu, SimpleGrid, Container, ThemeIcon } from '@mantine/core';
 import { Link } from 'react-router-dom';
 import { createStyles, Card, Avatar, Text, Group } from '@mantine/core';
-import { IconPaw, IconActivity } from '@tabler/icons';
+import { IconPaw, IconActivity, IconSettings } from '@tabler/icons';
 
 interface ProfileProps {}
 
@@ -10,15 +10,17 @@ const Profile: FC<ProfileProps> = () => {
 
   return (
     <Flex direction={'column'} wrap="nowrap" gap={"xl"}>
-      
       <Card shadow="sm" p="lg" radius="md" withBorder>
+      
       <Card.Section>
+        
         <Image
           src="https://comptroller.texas.gov/economy/fiscal-notes/2021/jul/images/rescue-hero.jpg"
           height={160}
           alt="Norway"
         />
         <Avatar src="https://cheng-bing.top/wp-content/uploads/2020/09/cropped-20200811_2_f2-1.jpg" alt="it's me"size={80} radius={80} mt={-28} ml={30}/>
+        
       </Card.Section>
 
       <Group position="apart" mt="md" mb="xs">
