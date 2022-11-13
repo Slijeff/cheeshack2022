@@ -12,6 +12,8 @@ import {
   TextInput,
   Radio,
   NumberInput,
+  Modal,
+  Text,
 } from '@mantine/core';
 import {
   IconPaw,
@@ -19,14 +21,28 @@ import {
   IconUpload,
   IconDna2,
   IconCake,
+  IconCircleCheck,
 } from '@tabler/icons';
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useState } from 'react';
 
 interface OfferProps {}
 
 const Offer: FunctionComponent<OfferProps> = () => {
+  const [opened, setOpened] = useState<boolean>(false);
   return (
     <Box sx={{ padding: 10 }}>
+      <Modal opened={opened} onClose={() => setOpened(false)} centered={true}>
+        <Flex
+          direction={'column'}
+          justify={'center'}
+          align={'center'}
+          sx={{ marginBottom: 15 }}
+        >
+          <IconCircleCheck size={120} color='#20C997' />
+          <Title>Congratulation!</Title>
+          <Text>You have succesfully filed a report.</Text>
+        </Flex>
+      </Modal>
       <Card shadow='sm' p='lg' radius='md' withBorder>
         <Card.Section>
           <BackgroundImage
@@ -136,6 +152,7 @@ const Offer: FunctionComponent<OfferProps> = () => {
               variant='gradient'
               gradient={{ from: 'indigo', to: 'cyan' }}
               size='lg'
+              onClick={() => setOpened(true)}
             >
               Submit
             </Button>
