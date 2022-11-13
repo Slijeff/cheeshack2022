@@ -26,6 +26,7 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
           padding: '10',
           overflow: 'hidden',
           borderRadius: '10px',
+          zIndex: 999,
         }}
         justify={'space-evenly'}
         align={'center'}

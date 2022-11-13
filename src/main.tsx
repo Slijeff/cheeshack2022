@@ -40,6 +40,10 @@ function Main() {
           path: '/',
           element: <Index />,
         },
+        {
+          path: '/offer',
+          element: <p>Offer Page</p>,
+        },
       ],
     },
   ]);
