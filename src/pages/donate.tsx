@@ -103,7 +103,7 @@ function Donate() {
               icon={<IconSearch size={16} stroke={1.5} />}
               data={[]}
             />
-            <Button variant="gradient" gradient={{ from: '#ed6ea0', to: '#ec8c69', deg: 35 }}>Search</Button>
+            <Button variant="gradient" gradient={{ from: '#ed6ea0', to: '#ec8c69', deg: 35 }} size={"sm"}><IconSearch /></Button>
           </Group>
           
         </div>
