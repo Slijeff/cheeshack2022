@@ -25,7 +25,7 @@ const Report: FunctionComponent<ReportProps> = () => {
   const [opened, setOpened] = useState<boolean>(false);
   return (
     <Box sx={{ padding: 10 }}>
-      <Modal opened={opened} onClose={() => setOpened(false)}>
+      <Modal opened={opened} onClose={() => setOpened(false)} centered={true}>
         <Flex
           direction={'column'}
           justify={'center'}
