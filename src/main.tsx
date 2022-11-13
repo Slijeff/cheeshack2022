@@ -14,11 +14,11 @@ import Report from './pages/report';
 import Donate from './pages/donate';
 import Offer from './pages/offer';
 import Index from './pages';
+import { Errorpage } from './pages/errorPage';
 
 function Main() {
   const router = createBrowserRouter([
     {
-      path: '/',
       element: <Navbar />,
       children: [
         {
@@ -42,6 +42,7 @@ function Main() {
           element: <Offer />,
         },
       ],
+      errorElement: <Errorpage />,
     },
     {
       path: '/index',
