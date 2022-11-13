@@ -13,6 +13,7 @@ import './global.css';
 import Report from './pages/report';
 import Donate from './pages/donate';
 import Offer from './pages/offer';
+import Index from './pages';
 
 function Main() {
   const router = createBrowserRouter([
@@ -35,6 +36,10 @@ function Main() {
         {
           path: '/donate',
           element: <Donate />,
+        },
+        {
+          path: '/',
+          element: <Index />,
         },
         {
           path: '/offer',
