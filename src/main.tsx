@@ -35,6 +35,10 @@ function Main() {
           path: '/donate',
           element: <Donate />,
         },
+        {
+          path: '/offer',
+          element: <p>Offer Page</p>,
+        },
       ],
     },
   ]);

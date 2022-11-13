@@ -24,7 +24,12 @@ const ReportMenu: FunctionComponent<ReportMenuProps> = () => {
       <Menu.Dropdown>
         <Menu.Label>Want to Help?</Menu.Label>
         <Menu.Divider></Menu.Divider>
-        <Menu.Item sx={{ fontSize: '1rem' }} onClick={() => navigate('/donate')}>Donate</Menu.Item>
+        <Menu.Item
+          sx={{ fontSize: '1rem' }}
+          onClick={() => navigate('/donate')}
+        >
+          Make Donation
+        </Menu.Item>
         <Menu.Divider></Menu.Divider>
         <Menu.Item
           sx={{ fontSize: '1rem' }}
@@ -33,7 +38,9 @@ const ReportMenu: FunctionComponent<ReportMenuProps> = () => {
           Report/Post
         </Menu.Item>
         <Menu.Divider></Menu.Divider>
-        <Menu.Item sx={{ fontSize: '1rem' }}>Offer</Menu.Item>
+        <Menu.Item sx={{ fontSize: '1rem' }} onClick={() => navigate('/offer')}>
+          Offer My Pet
+        </Menu.Item>
       </Menu.Dropdown>
     </Menu>
   );

@@ -3,33 +3,41 @@ import {
   Flex,
   Title,
   Card,
-  Image,
-  Group,
-  Badge,
-  Text,
   Button,
   BackgroundImage,
-  MultiSelect,
   NativeSelect,
   Input,
-  TextInput,
   Textarea,
   FileInput,
+  Modal,
+  Text,
 } from '@mantine/core';
-import { FunctionComponent } from 'react';
-import { IconPaw, IconMapPin, IconUpload } from '@tabler/icons';
+import { FunctionComponent, useState } from 'react';
+import {
+  IconPaw,
+  IconMapPin,
+  IconUpload,
+  IconCircleCheck,
+} from '@tabler/icons';
 interface ReportProps {}
 
 const Report: FunctionComponent<ReportProps> = () => {
+  const [opened, setOpened] = useState<boolean>(false);
   return (
     <Box sx={{ padding: 10 }}>
-      <Card
-        shadow='sm'
-        p='lg'
-        radius='md'
-        withBorder
-        sx={{ height: '80vh', overflow: 'auto' }}
-      >
+      <Modal opened={opened} onClose={() => setOpened(false)}>
+        <Flex
+          direction={'column'}
+          justify={'center'}
+          align={'center'}
+          sx={{ marginBottom: 15 }}
+        >
+          <IconCircleCheck size={120} color='#20C997' />
+          <Title>Congratulation!</Title>
+          <Text>You have succesfully filed a report.</Text>
+        </Flex>
+      </Modal>
+      <Card shadow='sm' p='lg' radius='md' withBorder>
         <Card.Section>
           <BackgroundImage
             sx={{
@@ -56,7 +64,17 @@ const Report: FunctionComponent<ReportProps> = () => {
             direction={'column'}
           >
             <NativeSelect
-              data={['Please Select', 'Cat', 'Dog']}
+              data={[
+                'Please Select',
+                'Cat',
+                'Dog',
+                'Bird',
+                'Squirrel',
+                'Horse',
+                'Bat',
+                'Hamster',
+                'Others',
+              ]}
               label='What type of animal did you found?'
               placeholder='Please select'
               sx={{ width: '100%' }}
@@ -65,7 +83,7 @@ const Report: FunctionComponent<ReportProps> = () => {
               icon={<IconPaw />}
             ></NativeSelect>
             <Input.Wrapper
-              label='Where did you found this animal?'
+              label='Where did you find this animal?'
               required
               size='lg'
             >
@@ -76,13 +94,13 @@ const Report: FunctionComponent<ReportProps> = () => {
             </Input.Wrapper>
             <Textarea
               label='Appearance description'
-              placeholder='Your description'
+              placeholder='Describe what the animal looks like'
               size='lg'
               required
             ></Textarea>
             <Textarea
               label='Disability description'
-              placeholder='Your description'
+              placeholder='Your description (N/A if unknown)'
               size='lg'
               required
             ></Textarea>
@@ -97,6 +115,7 @@ const Report: FunctionComponent<ReportProps> = () => {
               variant='gradient'
               gradient={{ from: 'indigo', to: 'cyan' }}
               size='lg'
+              onClick={() => setOpened(true)}
             >
               Submit
             </Button>
