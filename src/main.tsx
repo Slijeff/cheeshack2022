@@ -38,14 +38,14 @@ function Main() {
           element: <Donate />,
         },
         {
-          path: '/',
-          element: <Index />,
-        },
-        {
           path: '/offer',
           element: <Offer />,
         },
       ],
+    },
+    {
+      path: '/index',
+      element: <Index />,
     },
   ]);
 
