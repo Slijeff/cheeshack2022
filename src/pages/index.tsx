@@ -38,7 +38,7 @@ function Index() {
           '0px 4px 4px 0px #00000040,inset 0 0 0 1000px rgba(0,0,0,.2)',
         backgroundSize: 'cover',
         backgroundPositionX: '-11rem',
-        width: '101vw',
+        width: '100vw',
         height: '100vh',
         overflow: 'hidden',
       }}

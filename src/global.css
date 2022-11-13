@@ -1,4 +1,7 @@
-html {
+/* html {
     margin-left: -10px;
     margin-top: -10px;
+} */
+body {
+    margin: 0;
 }
